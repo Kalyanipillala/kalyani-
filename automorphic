@@ -1,0 +1,19 @@
+import java.util.*;
+class AM                                          
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int temp,r=0;
+temp=n*n;
+while(temp!=0)
+{
+r=temp%100;
+temp=0;
+}
+if(r==n)
+System.out.println("Given number is Automorphic ");
+else
+System.out.println("Given number is not Automorphic ");
+}}
