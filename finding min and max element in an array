@@ -1,0 +1,20 @@
+import java.util.*;
+class maxminarray
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter array size: ");
+int size,i;
+size=sc.nextInt();
+int ar[]=new int[size];
+System.out.print("Enter array elements : ");
+for(i=0;i<size;i++)
+    {
+       ar[i]=sc.nextInt();
+     }
+Arrays.sort(ar);
+System.out.print("max="+ar[size-1]);//max
+System.out.print(" min="+ar[0]);//min
+
+}}
