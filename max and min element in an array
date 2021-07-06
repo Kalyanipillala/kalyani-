@@ -1,0 +1,16 @@
+class Compute 
+{
+    static pair getMinMax(long A[], long n)  
+    {
+       pair p;
+       long min =A[0];
+       long max=-1;
+       for(int i=0;i<A.length;i++)
+       {
+           min=Math.min(A[i], min);
+           max=Math.max(A[i],max);
+       }
+        p= new pair(min,max);
+        return p;
+     }
+ }
