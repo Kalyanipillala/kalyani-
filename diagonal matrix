@@ -1,0 +1,44 @@
+import java.util.*;
+class Diagonal
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int arr[][],i,j;
+System.out.println("enter size");
+int s=sc.nextInt(); 
+arr=new int[s][s];
+System.out.print("Enter elements");
+for(i=0;i<s;i++)
+{
+for(j=0;j<s;j++)
+{
+arr[i][j]=sc.nextInt();
+}
+}
+int count=0;
+for(i=0;i<s;i++)
+{
+for(j=0;j<s;j++)
+{
+if(i==j )
+{
+if(arr[i][j]!=0)
+{
+count=1;
+break;
+}
+else
+ {
+if(arr[i][j]==0)
+count=1;
+}
+}
+}
+}
+if(count==0)
+System.out.print("Diagonal matrix");
+else
+System.out.print("Not a Diagonal matrix");
+}
+}
