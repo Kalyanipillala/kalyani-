@@ -1,0 +1,46 @@
+
+import java.util.*;
+class rightleft
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter x");
+int x=sc.nextInt();
+System.out.println("Enter y");
+int y=sc.nextInt();
+System.out.println("Enter size");
+int n=sc.nextInt();
+int[] b=new int[n];
+int[] a=new int[n];
+int r=n-x;
+int i;
+int p=y+1;
+System.out.println("Enter elements");
+for(i=0;i<n;i++)
+{
+a[i]=sc.nextInt();
+}
+for(i=0;i<n;i++)
+{
+ if((i-r)<0)
+ {
+ b[n+i-r]=a[i];
+ }
+ else
+ b[i-r]=a[i];
+}
+for(i=0;i<n;i++)
+{
+ if((i-p)<0)
+ {
+ b[n+i-p]=a[i];  
+ }
+ else
+ b[i-p]=a[i];
+}
+for(i=0;i<n;i++)
+{
+System.out.print(b[i]+" ");
+}}}
+
