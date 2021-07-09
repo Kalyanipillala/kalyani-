@@ -1,0 +1,29 @@
+import java.util.*;
+class Pal 
+{
+public static void main(String[] args)
+{
+String str;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter the string");
+str=sc.nextLine();
+char ch[]=str.toCharArray();
+int l=ch.length;
+char arr[]=new char[l];
+int j=0,count=0;
+for(int i=l-1;i>=0;i--)
+{
+arr[j]=ch[i];
+j++;
+}
+for(int i=0;i<l;i++)
+{
+if(arr[i]==ch[i])
+count++;
+}
+if(count==l)
+System.out.println(" Palindrome");
+else
+System.out.println("Not a Palindrome");
+}
+}
