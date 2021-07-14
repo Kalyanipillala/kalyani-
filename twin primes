@@ -1,0 +1,45 @@
+import java.util.*;
+class prime
+{
+static int pair(int n,int m)
+{
+StringBuffer sb=new StringBuffer();
+int count=0;
+int i,j;
+for(i=n;i<=m;i++)
+{
+for(j=2;j<i;j++)
+{
+  if(i%j==0)
+  {count=0;
+  break; }
+  else
+  { count=1; }
+}
+if(count==1)
+{
+sb.append(i);
+}
+}
+String str=sb.toString();
+int num=Integer.parseInt(str);
+return num;
+}
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the range");
+int n1=sc.nextInt();
+int m1=sc.nextInt();
+int n=0;
+int[] a=new int[n];
+prime p=new prime();
+int num=p.pair(n1,m1);
+System.out.println(num);
+//for(int b=0;b<n;b++)
+//{ 
+//System.out.println("("+a[b]+","+a[b+1]);
+//b++;
+//}
+}
+}
