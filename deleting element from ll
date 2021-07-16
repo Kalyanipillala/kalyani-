@@ -1,0 +1,30 @@
+import java.util.*;
+class linkedlist
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter n value");
+int n=sc.nextInt();
+LinkedList<Integer> l=new LinkedList<Integer>();
+System.out.println("enter "+n+ "values");
+for(int i=0;i<n;i++)
+{
+l.add(sc.nextInt());
+}
+System.out.println("enter value to search");
+int del=sc.nextInt();
+int cursor;
+if(l.contains(del))
+{
+int index=l.indexOf(del);
+l.remove(index);
+for(Integer i:l)
+{
+System.out.print(i+" ");
+}
+}
+else
+System.out.println("element not found");
+}
+} 
