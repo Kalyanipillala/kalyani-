@@ -1,0 +1,27 @@
+import java.util.*;
+class arrupdate
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter size");
+int n=sc.nextInt();
+ArrayList<Integer> a=new ArrayList<Integer>();
+System.out.println("enter"+n+"values");
+for(int i=0;i<n;i++)
+{
+a.add(sc.nextInt());
+}
+System.out.println("Enter value in array,update value");
+int val=sc.nextInt(); 
+int updateval=sc.nextInt();
+if(a.contains(val))
+{
+int index=a.indexOf(val);
+a.set(index,updateval);
+System.out.println( "modified list"+a);
+}
+else
+System.out.println("false.Updation not possible");
+}
+}
