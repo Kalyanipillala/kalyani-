@@ -20,12 +20,12 @@ if(a.contains(val))
 int index=a.indexOf(val);
 a.set(index,updateval);
 System.out.println( "modified list"+a);
-}
-else
-System.out.println("false.Updation not possible");
 for(Integer i:a)
 {
 System.out.println(i+" ");
 }
+}
+else
+System.out.println("false.Updation not possible");
 }
 }
