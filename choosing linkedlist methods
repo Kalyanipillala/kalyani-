@@ -1,0 +1,59 @@
+import java.util.*;
+class linkmethods
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+LinkedList<Integer> l=new LinkedList<Integer>();
+int size=sc.nextInt();
+int n,ch,index;
+System.out.println("enter elements");
+for(int i=0;i<size;i++)
+l.add(sc.nextInt());
+do
+{
+System.out.println("1.BeginInsert \n2.EndInsert\n3.Position Insert\n4.Begin Delete\n5.End Delete\n6.Position Delete\n7.Display\n8.Exit1\n.....Enter your Choice:");
+ch=sc.nextInt();
+switch(ch)
+{
+case 1: System.out.println("Enter n value");
+n=sc.nextInt();
+l.addFirst(n);
+System.out.println(l);
+break;
+case 2: System.out.println("Enter n value");
+n=sc.nextInt();
+l.addLast(n);
+System.out.println(l);
+break;
+case 3: System.out.println("Enter n value");
+n=sc.nextInt();
+index=l.indexOf(n);
+l.add(index,n);
+ System.out.println(l);
+break;
+case 4:
+l.removeFirst();
+System.out.println(l);
+break;
+case 5: 
+l.removeLast();
+System.out.println(l);
+break;
+case 6: System.out.println("Enter n value");
+n=sc.nextInt();
+index=l.indexOf(n);
+l.remove(index);
+System.out.println(l);
+break;
+case 7: System.out.println(l);
+break;
+default: System.out.println("Invalid Choice");
+}
+System.out.println("1.BeginInsert\n2.EndInsert \n3. Position Insert\n4. Begin Delete\n5. End Delete\n6. Position Delete\n7. Display\n8. Exit1\n.....Enter your Choice:");
+ch=sc.nextInt();
+}while(ch<8);
+}
+}
+ 
+
