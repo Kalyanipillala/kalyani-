@@ -1,0 +1,29 @@
+import java.util.*; 
+class mapfreq
+{
+public static void main(String args[])
+{ 
+HashMap<Integer,Integer> x=new HashMap<Integer,Integer>();
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int[] arr=new int[n];
+for(int i=0;i<n;i++)
+{
+arr[i]=sc.nextInt();
+}
+
+for(int i=0;i<arr.length;i++) 
+{
+int key;
+key=arr[i];
+if(x.containsKey(key)) 
+x.put(key,x.get(key)+1); 
+else 
+x.put(key,1);
+} 
+for(Integer i:x.keySet())
+{if(x.get(i)>1)
+System.out.println(i+"="+x.get(i)+" "); 
+}
+}
+}
