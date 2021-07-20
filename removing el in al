@@ -1,31 +1,31 @@
 import java.util.*;
-class arrlistrm
+class arrlistrem
 {
 public static void main(String args[])
 {
-Scanner sc=new Scanner(System.in);
-ArrayList<Integer> a=new ArrayList<Integer>();
-System.out.println("enter n value");
+ArrayList <Integer> a=new  ArrayList <Integer>();
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter size of ArrayList");
 int n=sc.nextInt();
-System.out.println("enter value in arraylist");
-for(int i=1;i<=n;i++)
-{
-int el=sc.nextInt();
-a.add(el);
-}
-System.out.println("enter k value");
+System.out.println("Enter  array list elements");
+for(int i=0;i<n;++i)
+a.add(sc.nextInt());
+System.out.println("Enter the k value");
 int k=sc.nextInt();
-Iterator i=a.iterator();
-while(it.hasNext())
+for(int j=0;j<=n;j++)
 {
-int a=it.next();
-int index=a.indexOf(i);
-if(i<=k)
-a.remove(index);
+try
+{
+int num=a.get(j); 
+if(num<=k)
+a.remove(j);
 }
-for(Integer i:a)
+catch(Exception e)
 {
-System.out.println(i+" ");
+System.out.println("exception occured ="+e);}}
+System.out.println("Updated ArrayList");
+for(Integer i:a)
+{System.out.print(i+" ");
 }
 }
 }
