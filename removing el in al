@@ -1,0 +1,31 @@
+import java.util.*;
+class arrlistrm
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+ArrayList<Integer> a=new ArrayList<Integer>();
+System.out.println("enter n value");
+int n=sc.nextInt();
+System.out.println("enter value in arraylist");
+for(int i=1;i<=n;i++)
+{
+int el=sc.nextInt();
+a.add(el);
+}
+System.out.println("enter k value");
+int k=sc.nextInt();
+Iterator i=a.iterator();
+while(it.hasNext())
+{
+int a=it.next();
+int index=a.indexOf(i);
+if(i<=k)
+a.remove(index);
+}
+for(Integer i:a)
+{
+System.out.println(i+" ");
+}
+}
+}
