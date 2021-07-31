@@ -1,0 +1,24 @@
+import java.util.*;
+class subprimes
+{
+public static void main (String args[])
+{
+Scanner sc= new Scanner(System.in);
+int arr[]={3,5,7,11,13,17,19,23,29,31,37,41,43,47,53};
+int flag=0,n;
+System.out.println("enter target value:");
+int target=sc.nextInt();
+n=arr.length;
+for(int j=n-1;j>=0;j--)
+{
+for(int i=0;i<n;i++)
+{
+if(arr[j]-arr[i]==target)
+   flag++;
+}
+}
+if(flag>1)
+System.out.println("YES");
+else
+System.out.println("NO");
+}}
