@@ -1,0 +1,49 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args)
+    {
+     Scanner sc=new Scanner(System.in);
+     int q=sc.nextInt();
+     Stack<Integer> s1=new Stack<Integer>();
+     Stack<Integer> s2=new Stack<Integer>();
+     int choice;
+     for(int i=0;i<q;i++)
+     {
+        choice=sc.nextInt();
+        if(choice==1)
+        {
+         int x=sc.nextInt();
+         s1.push(x);
+        } 
+        else if(choice==2)
+        {
+         if(s2.empty())
+          {
+            while(!s1.empty())
+            {
+               s2.push(s1.pop);
+            }
+          }
+         s2.pop();
+        }
+        else
+        {
+         if(s2.empty())
+          {
+            while(!s1.empty())
+            {
+                s2.push(s1.pop);
+            }
+          }
+         System.out.println(s2.peek());
+        }
+         
+    }
+    }
+}
