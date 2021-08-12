@@ -1,0 +1,16 @@
+class recarray
+{
+ public static void main(String args[])
+ {
+    int a[]={56,89,34,12,77};
+    printArr(a,0,a.length);
+ }
+static void printArr(int a[],int i,int n)
+ { 
+    if(i>=n)
+     return;
+       System.out.print( a[i]+" "); 
+        printArr(a,i+1,n);  
+       i++; 
+ }  
+}
